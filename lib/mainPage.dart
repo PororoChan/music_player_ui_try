@@ -12,7 +12,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  
   static const max = 180;
   int seconds = max;
 
@@ -66,8 +65,8 @@ class _MainPageState extends State<MainPage> {
                         begin: Alignment.bottomRight,
                         end: Alignment.topLeft,
                         colors: [
-                          Colors.white10.withOpacity(0.3),
-                          Colors.white10.withOpacity(0.3)
+                          Colors.white10.withOpacity(0.2),
+                          Colors.white10.withOpacity(0.2)
                         ]),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
@@ -87,28 +86,32 @@ class _MainPageState extends State<MainPage> {
                     splashColor: prime,
                     icon: Icon(Icons.arrow_back_ios_new_rounded),
                     iconSize: 30.0,
-                    onPressed: () {},
-                    color: prime.withOpacity(0.8),
+                    onPressed: () {
+
+                    },
+                    color: prime.withOpacity(0.9),
                   ),
                   IconButton(
-                    splashColor: prime,
+                    splashColor: Colors.white,
                     icon: Icon(Icons.info),
                     iconSize: 30.0,
-                    onPressed: () {},
-                    color: prime.withOpacity(0.8),
+                    onPressed: () {
+
+                    },
+                    color: prime.withOpacity(0.9),
                   )
                 ]),
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: EdgeInsets.all(18.0),
+              padding: EdgeInsets.only(top: 18.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Back To You",
+                    "Come & Get It",
                     style: TextStyle(
                       color: Colors.black87.withOpacity(0.5),
                       fontSize: 25,
@@ -133,23 +136,75 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
           ),
-          // Align(
-          //   alignment: Alignment.bottomCenter,
-          //   child: Container(
-          //     padding: EdgeInsets.only(right: 18.0, left: 18.0),
-          //     margin: EdgeInsets.only(bottom: 175.0),
-          //     alignment: Alignment.bottomCenter,
-          //     child: ClipRRect(
-          //       borderRadius: BorderRadius.circular(28.0),
-          //       child: LinearProgressIndicator(
-          //         value: null,
-          //         color: semiOrange,
-          //         minHeight: 8,
-          //         backgroundColor: prime,
-          //       ),
-          //     ),
-          //   ),
-          // )
+          SizedBox(
+            height: 48.0,
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Container(
+              margin: EdgeInsets.only(top: 275, right: 10.0, left: 10.0),
+              height: MediaQuery.of(context).size.height / 5,
+              width: MediaQuery.of(context).size.width,
+              child: Container(
+                padding: EdgeInsets.all(18.0),
+                child: RichText(
+                  text: TextSpan(
+                      text: "Selena Marie Gomez ",
+                      style: TextStyle(
+                          height: 1.5,
+                          letterSpacing: 2,
+                          wordSpacing: 1,
+                          fontFamily: 'Pop',
+                          fontWeight: FontWeight.w800,
+                          fontSize: 12.0,
+                          color: softDark),
+                      children: [
+                        TextSpan(
+                            text:
+                                "adalah seorang penyanyi, aktris, dan produser berkebangsaan ",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              fontFamily: 'Pop',
+                              fontWeight: FontWeight.w400,
+                              color: softChoco,
+                            )),
+                        TextSpan(
+                            text: "Amerika Serikat ",
+                            style: TextStyle(
+                                color: softDark,
+                                fontWeight: FontWeight.w800,
+                                fontFamily: 'Pop',
+                                fontSize: 12.0)),
+                        TextSpan(
+                            text: "Sebagai artis solo, ",
+                            style: TextStyle(
+                                color: softChoco,
+                                fontFamily: 'Pop',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12.0)),
+                        TextSpan(
+                            text: "Gomez ",
+                            style: TextStyle(
+                                height: 1.5,
+                                color: softDark,
+                                fontWeight: FontWeight.w800,
+                                fontFamily: 'Pop',
+                                fontSize: 12.0)),
+                        TextSpan(
+                            text:
+                                "telah merilis tiga album yaitu Stars Dance(2013), Revival(2015), dan Rare(2020)",
+                            style: TextStyle(
+                              height: 1.5,
+                              color: softChoco,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: 'Pop',
+                              fontSize: 12.0,
+                            ))
+                      ]),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
